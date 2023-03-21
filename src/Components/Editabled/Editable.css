@@ -1,7 +1,6 @@
 .editable {
-  width: 100%;
+  width: fit-content;
   display: flex;
-  justify-content: flex-end;
 }
 
 .editable_display {

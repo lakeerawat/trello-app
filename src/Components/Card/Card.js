@@ -51,7 +51,7 @@ function Card(props) {
         onClick={() => setShowModal(true)}
       >
         <div className="card_top">
-          <div className="cross" onClick={() => props.removeCard(props.boardId, id)}>X</div>
+          <div className="cross" ><span onClick={() => props.removeCard(props.boardId, id)}>X</span></div>
         </div>
         <div className="card_title">{title}</div>
         <div className="card_desc">{desc}</div>

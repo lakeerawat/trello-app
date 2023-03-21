@@ -13,7 +13,7 @@ function Board(props) {
           {props.board?.title}
           <span>{props.board?.cards?.length || 0}</span>
         </p>
-        <div className="cross" onClick={() => props.removeBoard(props.boardId)}>X</div>
+        <div className="cross" ><span onClick={() => props.removeBoard(props.boardId)}>X</span></div>
       </div>
       <div className="board_cards custom-scroll">
         {props.board?.cards?.map((item) => (

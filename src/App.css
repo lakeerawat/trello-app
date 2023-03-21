@@ -49,6 +49,8 @@ gap: 2rem;
 .app_boards_last {
   flex-basis: 290px;
   min-width: 290px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .app_boards_add-board {

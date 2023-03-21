@@ -63,6 +63,13 @@ function App() {
     cards.splice(cardIndex, 1);
     setBoards(tempBoards);
   };
+  const dragEntered = (bid, cid) => {
+    if (targetCard.cid === cid) return;
+    setTargetCard({
+      bid,
+      cid,
+    });
+  };
 
   const dragEnded = (bid, cid) => {
     let s_boardIndex, s_cardIndex, t_boardIndex, t_cardIndex;
@@ -86,7 +93,7 @@ function App() {
     const sourceCard = tempBoards[s_boardIndex].cards[s_cardIndex];
     tempBoards[s_boardIndex].cards.splice(s_cardIndex, 1);
     // const targetCard = tempBoards[t_boardIndex].cards[t_cardIndex];
-    tempBoards[t_boardIndex].cards.splice(t_cardIndex, 0, sourceCard);
+    tempBoards[t_boardIndex].cards.splice(0, 0, sourceCard);
     // tempBoards.unshift(targetCard);
     setBoards(tempBoards);
 
@@ -96,13 +103,7 @@ function App() {
     });
   };
 
-  const dragEntered = (bid, cid) => {
-    if (targetCard.cid === cid) return;
-    setTargetCard({
-      bid,
-      cid,
-    });
-  };
+
 
   const updateCard = (bid, cid, card) => {
     const index = boards.findIndex((item) => item.id === bid);
