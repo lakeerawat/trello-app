@@ -52,6 +52,14 @@ gap: 2rem;
   display: flex;
   justify-content: flex-end;
 }
+.emptySignal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: cornflowerblue;
+}
 
 .app_boards_add-board {
   background-color: cadetblue;

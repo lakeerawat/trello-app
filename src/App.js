@@ -140,6 +140,7 @@ function App() {
               onSubmit={addboardHandler}
             />
           </div>
+          {boards.length !== 0 ? 
         <div className="app_boards">
           {boards.map((item) => (
             <Board
@@ -154,7 +155,7 @@ function App() {
             />
           ))}
 
-        </div>
+        </div> : <div className="emptySignal"><h2>Oops Board list is empty !! please add some boards</h2> </div>}
       </div>
     </div>
   );
